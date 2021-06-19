@@ -7,10 +7,10 @@
     "start": "docsify serve ./docs",
     "lint": "npm run lint:prettier && npm run lint:md",
     "lint:md": "markdownlint **/*.md",
-    "lint:prettier": "prettier --check **/*.md **/*.html **/*.css **/*.yml",
+    "lint:prettier": "prettier --check **/*.md **/*.html **/*.yml",
     "lint:fix": "npm run lint:fix:prettier && npm run lint:fix:md",
     "lint:fix:md": "markdownlint **/*.md --fix",
-    "lint:fix:prettier": "prettier --write **/*.md **/*.html **/*.css **/*.yml"
+    "lint:fix:prettier": "prettier --write **/*.md **/*.html **/*.yml"
   },
   "repository": {
     "type": "git",

@@ -81,7 +81,12 @@ Aufgabe, da es als Erstes den Rot-Wert auf $1$ setzt, dann den Grün-Wert auch a
 durch geht. Dann wird es den Rot-Wert auf $2$ erhöhen und wieder alle Blau-Werte durchgehen. Ein solcher Durchlauf
 dauert dann $255^3ms$.
 
+<!-- markdownlint-disable-next-line line-length -->
+
 [AlleMoeglichenFarben.ino]({GITHUB}/programme/ArduinoEinfuehrung/9.7_AlleMoeglichenFarben/AlleMoeglichenFarben/AlleMoeglichenFarben.ino ':include :type=code arduino :link :wrap')
 
 Wenn man aber alle Farben nacheinander gemischt durchgehen möchte, kann man folgenden Sketch verwenden.
+
+<!-- markdownlint-disable-next-line line-length -->
+
 [AmbientLight.ino]({GITHUB}/programme/ArduinoEinfuehrung/9.7_AlleMoeglichenFarben/AmbientLight/AmbientLight.ino ':include :type=code arduino :link :wrap')

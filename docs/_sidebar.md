@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD041 -->
+
 - General
 
   - [Home](Readme.md)

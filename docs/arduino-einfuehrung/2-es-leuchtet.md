@@ -22,7 +22,7 @@ $Widerstand = \left ( 1.Ring\ 2.Ring\ 3.Ring \right ) \cdot 4.Ring$
 
 $Toleranz = 5.Ring$
 
-#### Beispiele
+#### Beispiele 5 - Ringe
 
 1. rot-rot-schwarz-schwarz-braun
 
@@ -42,7 +42,7 @@ $Widerstand = \left ( 1.Ring\ 2.Ring \right ) \cdot 3.Ring$
 
 $Toleranz = 4.Ring$
 
-#### Beispiele
+#### Beispiele 4 - Ringe
 
 1. orange-orange-braun-braun
 

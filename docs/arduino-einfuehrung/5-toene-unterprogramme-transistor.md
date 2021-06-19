@@ -34,19 +34,19 @@ Transistor anliegt zu begrenzen, so dass der Transistor nicht zu heiß wird.
 
 1. Um den Widerstand zu berechnen berechnet man als erstes die Spannung, die am Widerstand abfallen muss.
 
-$\LARGE U_{R}=5V-0,8V=4,2V$
+   $\LARGE U_{R}=5V-0,8V=4,2V$
 
 2. Dann berechnet man die Stromstärke, die durch den Lautsprecher und den Transistor fließt.
 
-$\LARGE I=\frac{U}{R}=\frac{5V}{32\Omega}=0,15625A$
+   $\LARGE I=\frac{U}{R}=\frac{5V}{32\Omega}=0,15625A$
 
 3. Ein handelsüblicher NPN - Transistor hat einen Verstärkungsfaktor von ungefähr (B = 100).
 
-$\LARGE I_{R}=\frac{0,15625A}{100}=0,001525A$
+   $\LARGE I_{R}=\frac{0,15625A}{100}=0,001525A$
 
 4. Als letztes müssen wir nun den richtigen Widerstand aus den zuvor berechneten Werten berechnen.
 
-$\LARGE R_{1}=\frac{U_{R}}{I_{R}}=\frac{4,2V}{0,001525A}=2754\Omega$
+   $\LARGE R_{1}=\frac{U_{R}}{I_{R}}=\frac{4,2V}{0,001525A}=2754\Omega$
 
 5. Der nächstkleinere Wiedertand aus der E12 Reihe wäre 2,7kΩ aber wir nehmen den nächstkleineren 2,2kΩ Widerstand, so
    dass die Basis richtig durchgesteuert wird.

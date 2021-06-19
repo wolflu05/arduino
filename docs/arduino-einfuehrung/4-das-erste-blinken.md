@@ -12,10 +12,16 @@ Das Programm lässt die LED im Einsekundentakt blinken.
 
 Die Frequenz in der die LED maximal blinken darf, kann man entweder durch Ausprobieren und immer wieder erneutes
 hochladen herausfinden.
+
+<!-- markdownlint-disable-next-line line-length -->
+
 [Blinklicht.ino]({GITHUB}/programme/ArduinoEinfuehrung/4.2_SchnellesBlinken/Blinklicht/Blinklicht.ino ':include :type=code arduino :link :wrap')
 
 Eine weitere Lösung wäre die Frequenz mithilfe von zwei Tastern und einem counter, der auf dem seriellen Monitor
 ausgegeben wird zu bestimmen.
+
+<!-- markdownlint-disable-next-line line-length -->
+
 [FrequenzMesser.ino]({GITHUB}/programme/ArduinoEinfuehrung/4.2_SchnellesBlinken/FrequenzMesser/FrequenzMesser.ino ':include :type=code arduino :link :wrap')
 
 ### Lösung
@@ -61,10 +67,16 @@ es da nur einen `delay` Befehl gibt.
 ## 4.6 Ampel
 
 Wie überall, gibt es hier auch wieder verschiedene Programme, die Einfache Version
+
+<!-- markdownlint-disable-next-line line-length -->
+
 [Ampel_beginner.ino]({GITHUB}/programme/ArduinoEinfuehrung/4.6_Ampel/Ampel_beginner/Ampel_beginner.ino ':include :type=code arduino :link :wrap :open')
 
 und die fortgeschrittene version. Bei dieer Variante werden die LED Pins mit `defines` definiert, so dass man sie ganz
 einfach ändern kann, wenn man die LEDs an anderen Pins anschließt.
+
+<!-- markdownlint-disable-next-line line-length -->
+
 [Ampel_expert.ino]({GITHUB}/programme/ArduinoEinfuehrung/4.6_Ampel/Ampel_expert/Ampel_expert.ino ':include :type=code arduino :link :wrap')
 
 ## 4.7 Befehlesammlung
