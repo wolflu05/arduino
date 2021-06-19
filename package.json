@@ -1,0 +1,30 @@
+{
+  "name": "arduino",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "docsify serve ./docs",
+    "lint": "npm run lint:prettier && npm run lint:md",
+    "lint:md": "markdownlint **/*.md",
+    "lint:prettier": "prettier --check **/*.md **/*.html **/*.css **/*.yml",
+    "lint:fix": "npm run lint:fix:prettier && npm run lint:fix:md",
+    "lint:fix:md": "markdownlint **/*.md --fix",
+    "lint:fix:prettier": "prettier --write **/*.md **/*.html **/*.css **/*.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolflu05/arduino.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wolflu05/arduino/issues"
+  },
+  "homepage": "https://github.com/wolflu05/arduino#readme",
+  "dependencies": {
+    "docsify": "^4.12.1",
+    "markdownlint-cli": "^0.27.1",
+    "prettier": "^2.3.0"
+  }
+}

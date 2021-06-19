@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Arduino</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+
+    <style>
+      .code-embed-link pre {
+        margin-bottom: 0;
+      }
+
+      .code-embed-link p {
+        margin-top: 0;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">Loading...</div>
+
+    <script src="//cdn.jsdelivr.net/npm/mermaid@8.0.0-rc.8/dist/mermaid.min.js"></script>
+
+    <script>
+      mermaid.initialize({
+        startOnLoad: false,
+      });
+      let id = 0;
+
+      window.$docsify = {
+        repo: 'wolflu05/arduino',
+        loadSidebar: true,
+        name: 'Arduino',
+        search: 'auto',
+        auto2top: true,
+        formatUpdated: '{DD}.{MM}.{YYYY} {HH}:{mm}',
+        subMaxLevel: 3,
+        executeScript: true,
+        home: 'Readme.md',
+        alias: {
+          '/.*/_sidebar.md': '/_sidebar.md',
+        },
+        markdown: {
+          renderer: {
+            code: function (code, lang) {
+              if (lang === 'mermaid') {
+                return '<div class="mermaid">' + mermaid.render('mermaid-svg-' + id++, code) + '</div>';
+              }
+              return this.origin.code.apply(this, arguments);
+            },
+          },
+        },
+        plugins: [
+          function (hook, vm) {
+            hook.beforeEach(function (html) {
+              html = html.replace(/\[(.*)\]\(\{GITHUB\}(.*) '(.*)'\)/gm, function (string, desc, url, props) {
+                let res = string.replace(/\{GITHUB\}/, 'https://raw.githubusercontent.com/wolflu05/arduino/master');
+
+                props = props.split(':').map(function (value) {
+                  return value.trim();
+                });
+
+                if (props.includes('link')) {
+                  res = `<div class="code-embed-link">\n\n${res}\n\nZum <a href="https://github.com/wolflu05/arduino/blob/master${url}" target="_blank" rel="noopener">Programm</a> auf :octocat:.</div>`;
+                }
+
+                if (props.includes('wrap')) {
+                  const open = props.includes('open');
+                  res = `<details ${open ? 'open' : ''}><summary>${desc}</summary>${res}</details>`;
+                }
+
+                return res;
+              });
+
+              return html + '\n----\n' + 'Last modified {docsify-updated} ';
+            });
+          },
+        ],
+      };
+    </script>
+
+    <!-- Core plugins -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+
+    <!-- Extra plugins -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+
+    <!-- Prism language support -->
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-diff.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-arduino.min.js"></script>
+  </body>
+</html>
