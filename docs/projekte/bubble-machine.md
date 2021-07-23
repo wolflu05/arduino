@@ -23,3 +23,7 @@
 ## Schaltplan
 
 ![Schaltplan](../_media/projekte/bubble-machine/Schaltplan.png)
+
+## Code
+
+[BubbleMachine.ino]({GITHUB}/programme/Projekte/BubbleMachine/BubbleMachine.ino ':include :type=code arduino :link :wrap :open')
