@@ -27,3 +27,4 @@
 
   - [Intro](projekte/intro.md)
   - [Draw Image](projekte/draw-image.md)
+  - [Bubble Machine](projekte/bubble-machine.md)
